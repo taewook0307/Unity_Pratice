@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
 
     private void HorizontalRot()
     {
-        float angle = Input.GetAxis("Mouse X");
+        float angle = Input.GetAxisRaw("Mouse X");
         Vector3 yRotation = new Vector3(0, angle, 0) * horizontalSensitivity;
 
         playerRigid.MoveRotation(transform.rotation * Quaternion.Euler(yRotation));
